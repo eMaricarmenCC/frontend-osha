@@ -14,19 +14,21 @@ import { FaBuildingColumns } from "react-icons/fa6";
 function Sedes() {
   const { t, i18n } = useTranslation("sedes");
   return(
-    <section>
+    <section className="bg-white">
       <Breadcrumbs
         text={"Sedes"}
         icon={<FaBuildingColumns/>}
         img="/src/assets/img-nosotros/business.jpg"
       />
-      <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:py-16 w-full">
+      <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:pt-16 w-full">
         <h1 className="text-primary uppercase font-bold">{t("locations.title")}</h1>
         <Line1 bgColorClass={"bg-secondary"}/>
         <h3 className="mt-8">{t("locations.authorizedCenter.title")}</h3>
-        <h4 className="mt-3">{t("locations.authorizedCenter.subtitle")}</h4>
+        <h4 className="mt-3 text-primary font-semibold">{t("locations.authorizedCenter.subtitle")}</h4>
         <p className="mt-5">{t("locations.authorizedCenter.description")}</p>
-        <div className="mt-8">
+      </div>
+      <div className="bg-gray-100 px-5 md:px-10 lg:px-20 xl:px-40 py-10 w-full">
+        <div className="">
           <Accordian className='flex flex-col gap-3' >
             <AccordianItem value='1' trigger={t("locations.authorizedCenter.benefits.title")}>
               <List
@@ -48,8 +50,10 @@ function Sedes() {
               />
             </AccordianItem>
           </Accordian>
-          <p className="mt-10">{t("locations.authorizedCenter.complaints")}</p>
         </div>
+      </div>
+      <div className="bg-white px-5 md:px-10 lg:px-20 xl:px-40 py-10 w-full">
+        <p>{t("locations.authorizedCenter.complaints")}</p>
         <ButtonEmailInfo />
       </div>
     </section>

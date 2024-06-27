@@ -174,39 +174,6 @@
             "src": "/src/assets/img-acre-area/health.avif"
         }
     ],
-    "grades" : {
-        "title" : "Degrees",
-        "content" : "Our professional degrees are accredited and validated in 78 countries worldwide thanks to the international educational forum agreement.",
-        "p2" : "Endorsed by ISO 21001.",
-        "p3" : "And guaranteed by our AE (ACREDITED EDUCATION) accreditation",
-        "p4" : "Each of our degrees meet the requirements required throughout the world and are valid on 4 continents.",
-        "grades" : {
-            "title" : "Degrees",
-            "list" : [
-                "Occupational Safety and Health Manager in the Construction Industry (GSSTIC OSHA).",
-                "Occupational Risk Prevention Manager (GPRL OSHA).",
-                "Occupational Safety and Health Manager (GSSO OSHA).",
-                "Occupational Health and Safety Manager (GSSL OSHA).",
-                "Director of Occupational Risk Prevention (DPRL OSHA).",
-                "Directorate of Safety and Health at Work (DSST OSHA).",
-                "Director of Occupational Safety and Health (DSSO OSHA).",
-                "Occupational Safety and Health Trainer (ESST OSHA).",
-                "Occupational Safety and Health Trainer (ESSO OSHA).",
-                "Occupational Risk Prevention Trainer (EPRL OSHA).",
-                "Occupational Safety and Health Trainer (ESST OSHA).",
-                "HAZMAT (HAZWOPER) Trainer (EH OSHA).",
-                "Work at Height Trainer (ETA OSHA).",
-                "Confined Space Work Trainer (ETEC OSHA).",
-                "Occupational Safety and Health Specialist (ESSO OSHA).",
-                "Occupational Safety and Health Trainer (ESST OSHA).",
-                "specialist in Occupational Risk Prevention (EPRL OSHA).",
-                "Health Care Laboratory Safety Specialist (ESLAT OSHA).",
-                "HAZMAT 4 Specialist (OSHA).",
-                "Train the Trainer (OSHA).",
-                "Occupational Safety Supervisor (OSHA SPST)."
-            ]
-        }
-    },
     "accreditationAE" : {
         "accreditationAE" : {
             "title" : "AE Accreditation",
@@ -226,5 +193,114 @@
                 "Learn more about how to obtain AE accreditation here"
             ]
         }
+    },
+    "button": "AE Accreditation Process",
+    "accreditationProcessAE": {
+        "title": "AE Accreditation Process",
+        "list": {
+            "1st": {
+                "p": "The Study Center must be an authorized Osha-Institute center or have at least 3 accredited Trainers."
+            },
+            "2nd": {
+                "p": "Evaluation of experience, attitudes, aptitudes and knowledge of each member who is part of the educational entity."
+            },
+            "3rd": {
+                "p": [
+                "The educational procedures and techniques are evaluated where the knowledge of the students must have a Passing evaluation of no less than 87 points out of 100.",
+                "If the students of the educational entity obtain grades lower than 87 points, it is an indicator that the technique or procedures applied in its management are not adequate for the type of clients it is addressing.",
+                "In this process, the educational center must improve quality starting with the training procedures and techniques." ]
+            },
+            "4th": {
+                "p": "Compliance with the establishment of structures for each training program must be strict.",
+                "list": [
+                    "Security.",
+                    "Sequence.",
+                    "Improvements.",
+                    "Weaknesses.",
+                    "Specific management.",
+                    "Improvement skills.",
+                    "Developed competencies.",
+                    "Sustainability of the program.",
+                    "Casuistry and generalities.",
+                    "Comprehensive management.",
+                    "And improvement of knowledge and skills.",
+                    "Upon compliance with this structure, the audit is carried out.",
+                    "In each country we have compliance inspectors who verify whether the methods of the training structure are applied daily.",
+                    "Verifications are unannounced.",
+                    "In person."
+                ]
+            },
+            "5th": {
+                "p": "Company organization. Each company must comply with listing in its staff.",
+                "list": [
+                    "Head of the board.",
+                    "Academic director.",
+                    "Academic specialist.",
+                    "Master Trainer.",
+                    "Trainer."
+                ],
+                "p2":"Each of them must comply with the functions assigned to the holder for the improvement in educational quality.",
+                "list2": [
+                    "Academic specialist.",
+                    "Master Trainer.",
+                    "Trainer."
+                ],
+                "p3": [
+                    "They must be accredited by RAIA (American Network of Accredited Instructors).",
+                    "https://www.safetystrategy.es/raia.php",
+                    "Have the accreditation in the subject that is handled in the organization.",
+                    "They must be managers of continuous improvement.",
+                    "They must address the necessary knowledge and be transmitted effectively."
+                ]
+            },
+            "6th": {
+                "p": [
+                    "Accreditation of the professional training center.",
+                    "In this process, the organization receives the credential as an AE Organization and may use the official logo in the accreditations they manage.",
+                    "This accreditation is valid for 5 years from the issuance.",
+                    "At the same time, it has unforeseen annual inspections to verify compliance with it."
+                ]
+            }
+        },
+        "p": "Learn more about non-compliance and sanctions here.",
+        "btn": "Non-compliance"
+    },
+    "non-compliances": {
+        "title": "Noncompliances",
+        "p": [
+            "In case of noncompliance with any of the steps mentioned in points 1,2,3,4 and 5, depending on the severity, you may lose your accreditation or receive an administrative sanction where the use of the logo is restricted.",
+            "Failure to comply with the sanction will be discussed in the courts of the country of origin."
+        ],
+        "list": [
+            {
+                "title": "a) noncompliance with points 3.",
+                "p": [
+                    "When certifying or accrediting professionals who fail to obtain a passing grade of at least 87 out of 100.",
+                    "The use of temporary accreditation will be suspended for 6 months.",
+                    "If the issue is repeated, accreditation will be suspended for 2 years."
+                ]
+            },
+            {
+                "title": "b) Failure to comply with the educational quality structure.",
+                "p": [
+                    "Failure to comply with the educational training structure is sanctioned with the effective suspension of accreditation until compliance is achieved.",
+                    "In the event of a repeat offender, accreditation will be definitively suspended."
+                ]
+            },
+            {
+                "title": "c) non-compliance with the company's organization.",
+                "p": [
+                    "Each company must be respectful of AE's proposal.",
+                    "Keep the assigned staff current and operational.",
+                    "Comply with the RAIA accreditation for each of the members that make it up.",
+                    "Failure to comply with this point will be grounds for the total dissolution of the accreditation.",
+                    "AE applies administrative sanctions to its members and after the sanction no discharges of any kind are received.",
+                    "In case of dissolution of accreditation, the sanctioned company will not have any option to re-accredit with AE.",
+                    "Our verification inspectors do not require any permission to verify compliance with the standards proposed by AE.",
+                    "Accredited companies are obliged to facilitate the work of each inspector and provide the required conditions during their stay.",
+                    "Each inspector, upon determining non-compliance, will draw up a report at the time and those responsible will have to sign it confirming the work carried out by the inspector."
+                ]
+            }
+        ]
     }
 }

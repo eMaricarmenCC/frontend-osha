@@ -192,6 +192,115 @@
                 "A través de estas actividades, AE ayuda a la industria, en la mejora de los parámetros educativos y de formación y certificación de profesionales, actúa como arquitecto de la estructura de evaluación de la conformidad de programas específicos de la industria.",
                 "Aprende más sobre como obtener la acreditación AE aquí"
             ]
-        }
+        },
+        "button": "Proceso de Acreditación AE"
+    },
+    "accreditationProcessAE": {
+        "title": "Proceso de acreditación AE",
+        "list": {
+            "1st": {
+                "p": "El Centro de estudio tiene que ser un centro autorizado de Osha-Institute o contar con mínimo 3 Trainer acreditados."
+            },
+            "2nd": {
+                "p": "Evaluación de experiencia, actitudes, aptitudes y conocimientos de cada miembro que forma parte del ente educativo."
+            },
+            "3rd": {
+                "p": [
+                    "Se evalúa los procedimientos y técnicas educativas donde el conocimiento de los alumnos deberá tener una evaluación Aprobatoria no menor de 87 puntos de 100.",
+                    "Si los alumnos de la entidad educativa adquiere calificaciones menor a los 87 puntos es indicador que la técnica o procedimientos aplicados en su gestión no son las adecuadas para el tipo de clientes que se encuentra abordando.",
+                    "En este proceso el centro educativo debe mejorar la calidad empezando por los procedimientos y técnicas de formación."                ]
+            },
+            "4th": {
+                "p": "El cumplimiento de establecer estructuras a cada programa de formación debe ser estricta.",
+                "list": [
+                    "Seguridad.",
+                    "Secuencia.",
+                    "Mejoras.",
+                    "Debilidades.",
+                    "Gestión especifica.",
+                    "Habilidades de mejora.",
+                    "Competencias desarrolladas.",
+                    "Sostenibilidad del programa.",
+                    "Casuisticas y generalidades.",
+                    "Gestión integral.",
+                    "Y mejora de conocimientos y habilidades.",
+                    "Al cumplir con esta estructura se procede a la fiscalización.",
+                    "En cada país tenemos inspectores de cumplimiento qué verifican si se aplica a diario los métodos de la estructura formativa.",
+                    "Las verificaciones son inopinadas.",
+                    "De manera presencial."
+                ]
+            },
+            "5th": {
+                "p": "Organización de la empresa. Cada empresa debe cumplir con enlistar en su staff.",
+                "list": [
+                    "Jefe de directorio.",
+                    "Director académico.",
+                    "Especialista académico.",
+                    "Master Trainer.",
+                    "Trainer."
+                ],
+                "p2":"Cada uno de ellos debe complir con las funciones asignadas del titular para la mejora en la calidad educativa.",
+                "list2": [
+                    "Especialista académico.",
+                    "Master Trainer.",
+                    "Trainer."
+                ],
+                "p3": [
+                    "Deberán estar acreditados por RAIA (Red Americana de Instructores Acreditados).",
+                    "https://www.safetystrategy.es/raia.php",
+                    "Contar con la acreditación en el tema que se maneja en la organización.",
+                    "Deben ser gestores de la mejora continua.",
+                    "Deben abordar los conocimientos necesarios y ser transmitido de manera efectiva."
+                ]
+            },
+            "6th": {
+                "p": [
+                    "Acreditación del centro de formación profesional.",
+                    "En este proceso la organización recibe el credencial como Organismo AE y podrá usar el logo oficial en las acreditaciones que gestionen.",
+                    "Esta acreditación tiene de vigencia 5 años desde la emisión.",
+                    "A la vez cuenta con Inspecciones anuales imprevistas para verificar el cumplimento del mismo."
+                ]
+            }
+        },
+        "p": "Conoce más sobre los incumplimientos y sanciones aqui.",
+        "btn": "Incumplimientos"
+    },
+    "non-compliances": {
+        "title": "Incumplimientos",
+        "p": [
+            "En caso de incumplir con algún paso mencionado en los puntos 1,2,3,4 y 5, dependiendo de la gravedad podrá perder la acreditación o recibir una sanción administrativa donde se restringe el uso del logo.",
+            "El incumplimiento a la sanción será discutída en los tribunales del país de naturaleza."
+        ],
+        "list": [
+            {
+                "title": "a) incumplimiento de los puntos 3.",
+                "p": [
+                    "Al certificar o acreditar profesionales que no logren obtener notas Aprobatoria como mínimo 87 de 100.",
+                    "Se suspenderá el uso de la acreditación temporal por 6 meses.",
+                    "Si se reincide en el tema se suspenderá la acreditación por 2 años."
+                ]
+            },
+            {
+                "title": "b) Incumplir la estructura de calidad educativa.",
+                "p": [
+                    "El incumplimiento de la estructura de formación educativa se sanciona con la suspensión efectiva de la acreditación hasta el cumplimiento de la conformidad.",
+                    "En caso sea reincidente se suspenderá en difinitivo la acreditación."
+                ]
+            },
+            {
+                "title": "c) incumplimiento de la organización de la empresa.",
+                "p": [
+                    "Cada empresa debe ser respetuoso con la propuesta de AE.",
+                    "Mantener vigente y operativo el staff asignado.",
+                    "Cumplir con la acreditación de RAIA para cada uno de los miembros que lo conforman.",
+                    "El incumplimiento de este punto será motivo de la disolución total de la acreditación.",
+                    "AE aplica sanciones administrativas a sus afiliados y posterior a la sanción no se recibe descargos de ningún índole.",
+                    "En caso de disolución de acreditación la empresa sancionada no tendrá opción alguna de volver a acreditarse con AE.",
+                    "Nuestros inspectores de verificación no requieren permiso alguno para verificar el cumplimiento de las normas propuestas por AE.",
+                    "Las empresas acreditadas están en la obligación de facilitar el trabajo a cada inspector y brindar las condiciones requeridas durante su estadía.",
+                    "Cada inspector al determinar incumplimientos levantara un acta en el momento y los responsables tendrán que firmarlo dando conformidad al trabajo realizado por el inspector."
+                ]
+            }
+        ]
     }
 }

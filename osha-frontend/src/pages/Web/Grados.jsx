@@ -37,7 +37,7 @@ function Grados(){
         img="/src/assets/img-nosotros/business.jpg"
       />
       <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:py-14">
-        <h1 className="font-bold uppercase text-primary w-auto text-2xl lg:text-3xl">
+        <h1 className="font-bold uppercase text-primary w-auto">
           {t("title")}
         </h1>
         <Line1 bgColorClass={"bg-secondary"}/>

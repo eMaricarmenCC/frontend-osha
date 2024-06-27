@@ -121,7 +121,7 @@ const NavbarMd = () => {
   };
 
   return (
-    <div className="hidden md:block flex w-full bg-grisFondo p-3 text-neutral-200 md:justify-center">
+    <div className="hidden md:block flex w-full bg-white p-3 text-neutral-200 md:justify-center">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         {/* Logo */}
         <Link to="/" className="flex items-center">

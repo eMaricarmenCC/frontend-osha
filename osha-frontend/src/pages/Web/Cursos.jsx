@@ -21,7 +21,7 @@ function Cursos() {
         <Line1 bgColorClass={"bg-secondary"}/>
         <div className="mt-6">
           {t("text", { returnObjects: true }).map((p, index) => (
-            <p className="mt-1">{p}</p>
+            <p key={index} className="mt-1">{p}</p>
           ))}
         </div>
       </div>
@@ -43,7 +43,7 @@ function CursosGratuitos() {
         <Line1 bgColorClass={"bg-secondary"}/>
         <div className="mt-6">
           {t("text", { returnObjects: true }).map((p, index) => (
-            <p className="mt-1">{p}</p>
+            <p key={index} className="mt-1">{p}</p>
           ))}
         </div>
       </div>

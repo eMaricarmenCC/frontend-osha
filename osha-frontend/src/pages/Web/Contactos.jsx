@@ -40,7 +40,7 @@ function Contactos() {
     }
   });
   return(
-    <section className="bg-grisFondo">
+    <section className="bg-white">
       <Breadcrumbs
         text={"Contáctanos"}
         icon={<FaBuildingColumns/>}
@@ -48,12 +48,11 @@ function Contactos() {
       />
       {/* CONTACT SECTION */}
       <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:py-15 lg:py-20 w-full">
+        <h4 className="">{t("subtitle")}</h4>
+        <h1 className="text-primary font-bold uppercase">{t("title")}</h1>
+        <Line1 bgColorClass={"bg-secondary"} />
         <div className="w-full flex flex-col lg:flex-row gap-5">
-          {/*  */}
           <div className="w-full">
-            <h4 className="">{t("subtitle")}</h4>
-            <h2 className="text-primary"><b>{t("title")}</b></h2>
-            <Line1 bgColorClass={"bg-secondary"} />
             <p className="mt-5">{t("p")}</p>
             <div className="mt-8">
               {t("emails", { returnObjects: true }).map((li, index) => (
@@ -70,8 +69,8 @@ function Contactos() {
           </div>
           {/* Formulario de contacto */}
           <div className="w-full">
-            <div className="bg-grisFondo p-5 rounded-lg">
-              <h3 className="text-center text-primary">Formulario para contactarnos</h3>
+            <div className="bg-grisFondo px-5 py-8 rounded-lg">
+              <h3 className="text-center text-primary font-semibold">Formulario para contactarnos</h3>
               <form onSubmit={onSubmit} className="mt-5 bg-white flex flex-col gap-5 p-5 rounded-lg shadow-lg">
                 <div>
                   <div className="relative bg-inherit">

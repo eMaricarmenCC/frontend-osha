@@ -11,7 +11,7 @@ import { GradoDetalle, Grados } from '../Web/Grados';
 import { Certex } from '../Web/Certex';
 import { Cursos, CursosGratuitos } from '../Web/Cursos';
 import { Membresia } from '../Web/Membresia';
-import { Acreditacion, AcreditacionAE, AcreditacionArea, AcreditacionAreaDetalle } from '../Web/Acreditacion';
+import { Acreditacion, AcreditacionAE, AcreditacionArea, AcreditacionAreaDetalle, ProcesoAcreditacionAE, IncumplimientoAcreditacionAE } from '../Web/Acreditacion';
 import { Corporativos } from '../Web/Corporativos';
 import { Sedes } from '../Web/Sedes';
 import { Contactos } from './Contactos';
@@ -63,6 +63,8 @@ function Web() {
         <Route path='/representante-pakistan' element={<RepresentantePakistan/>} />
         <Route path='/representante-londres' element={<RepresentanteLondres/>} />
         <Route path="/acreditacion-area/:id" element={<AcreditacionAreaDetalle/>} />
+        <Route path="/proceso-acreditacion-ae" element={<ProcesoAcreditacionAE/>} />
+        <Route path="/incumplimiento-acreditacion-ae" element={<IncumplimientoAcreditacionAE/>} />
       </Routes>
       <Footer/>
     </>

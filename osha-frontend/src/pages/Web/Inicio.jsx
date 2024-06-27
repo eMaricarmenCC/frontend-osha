@@ -179,29 +179,6 @@ const ItemCount = ({icon, text, nstart, nend, time}) => {
   );
 };
 
-const Hero1 = () => {
-  return(
-    <>
-    {/* Hero */}
-    <section className="relative h-screen flex flex-col items-center justify-center text-center text-white">
-      <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-        <video
-          className="min-w-full min-h-full absolute object-cover"
-          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-          type="video/mp4"
-          autoPlay
-          muted
-          loop
-        ></video>
-        <div className="absolute w-full h-full bg-black opacity-60"></div>
-      </div>
-      <div className="video-content space-y-2 z-10">
-        <h1 className="font-light text-6xl">Osha Institute</h1>
-      </div>
-    </section>
-    </>
-  );
-};
 
 /* CARDS DE INTRODUCCIÓN */
 const IntroCards = () => {
@@ -268,7 +245,15 @@ const MetodologiaEducativa = () => {
   });
   return(
     <section className="bg-grisFondo">
-      <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-8 lg:py-10">
+      <motion.div
+        ref={ref}
+        initial={{ y: '10%', opacity: 0 }}
+        animate={inView ? { y: '0%', opacity: 1 } : { y: '40%', opacity: 0 }}
+        transition={{ 
+          type: 'spring', stiffness: 120, damping: 20
+        }}
+        className="px-5 md:px-10 lg:px-20 xl:px-40 py-8 lg:py-10"
+      >
         <SectionImgContent
           imagePath={"/src/assets/img-inicio/education.jpeg"}
           title={t("methodology.title")}
@@ -276,7 +261,7 @@ const MetodologiaEducativa = () => {
           textButton={t("methodology.learnMoreUs")}
           link={"/nosotros"}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
@@ -289,8 +274,8 @@ const Grados = () => {
     navigate(`/grados/${grado.id}`, { state: { grado } });
   };
   const { ref, inView } = useInView({
-    triggerOnce: true,  // La animación se activará solo una vez
-    threshold: 0.1,     // Se activa cuando el 10% del div es visible
+    triggerOnce: false,  // La animación se activará solo una vez
+    threshold: 0.001,     // Se activa cuando el 10% del div es visible
   });
   return(
     <section className="bg-grisFondo" style={{ backgroundImage: "url('/src/assets/papel/papel12.jpg')" }}>
@@ -307,9 +292,19 @@ const Grados = () => {
           {t("titleHome")}
         </motion.h1>
         <Linea/>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
+        <div
+          ref={ref}
+          initial={{ y: '10%', opacity: 0 }}
+          animate={inView ? { y: '0%', opacity: 1 } : { y: '40%', opacity: 0 }}
+          transition={{ 
+            type: 'spring', stiffness: 120, damping: 20
+          }}
+          className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5"
+        >
           { t("degreeData", { returnObjects: true }).map((grado,index) => (
-            <div key={index}>
+            <div
+              key={index}
+            >
               <CardGrado
                 k={index}
                 id={grado.id}
@@ -353,11 +348,25 @@ const Acreditacion = () => {
 /* CATEGORÍAS */
 const Categorias = () => {
   const { t, i18n } = useTranslation("inicio");
+  const { ref, inView } = useInView({
+    triggerOnce: true,  // La animación se activará solo una vez
+    threshold: 0.1,     // Se activa cuando el 10% del div es visible
+  });
   return(
     <section className="bg-grisFondo">
       <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:py-14">
         <div className="">
-          <h2 className="text-center text-gray-600 font-bold uppercase">{t("categories.title")}</h2>
+          <motion.h2
+            ref={ref}
+            initial={{ y: '-10rem', opacity: 0 }}
+            animate={inView ? { y: 0, opacity: 1 } : { y: '-10rem', opacity: 0 }}
+            transition={{ 
+              duration: 3, type: 'spring', stiffness: 120, damping: 20
+            }}
+            className="text-center text-gray-600 font-bold uppercase"
+          >
+            {t("categories.title")}
+          </motion.h2>
           <Linea/>
         </div>
         <div className="mt-10 grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 md:grid-rows lg:grid-cols-3">
@@ -418,10 +427,24 @@ const Categorias = () => {
 /* ALIANZAS Y CONVENIOS */
 const AlianzaConvenio = () => {
   const { t, i18n } = useTranslation("inicio");
+  const { ref, inView } = useInView({
+    triggerOnce: false,  // La animación se activará solo una vez
+    threshold: 0.1,     // Se activa cuando el 10% del div es visible
+  });
   return(
     <section className="" style={{ backgroundImage: "url('/src/assets/papel/papel12.jpg')" }}>
       <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:py-14">
-        <h2 className="text-white text-center uppercase font-bold">{t("alliences.title")}</h2>
+        <motion.h2
+          ref={ref}
+          initial={{ y: '-10rem', opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : { y: '-10rem', opacity: 0 }}
+          transition={{ 
+            duration: 3, type: 'spring', stiffness: 120, damping: 20
+          }}
+          className="text-white text-center uppercase font-bold"
+        >
+          {t("alliences.title")}
+        </motion.h2>
         <Linea/>
         <Swiper
           effect={'coverflow'}
@@ -495,6 +518,10 @@ const AlianzaConvenio = () => {
 /* GALERÍA */
 const Galería = () => {
   const { t, i18n } = useTranslation("inicio");
+  const { ref, inView } = useInView({
+    triggerOnce: false,  // La animación se activará solo una vez
+    threshold: 0.1,     // Se activa cuando el 10% del div es visible
+  });
   const squareDataGalery = [
     {
       id: 1,
@@ -532,7 +559,17 @@ const Galería = () => {
   return (
     <section>
       <div className="px-5 py-10 sm:px-20">
-        <h2 className="text-center text-primary uppercase font-bold">{t("gallery.title")}</h2>
+        <motion.h2 
+          ref={ref}
+          initial={{ y: '-10rem', opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : { y: '-10rem', opacity: 0 }}
+          transition={{ 
+            duration: 3, type: 'spring', stiffness: 120, damping: 20
+          }}
+          className="text-center text-primary uppercase font-bold"
+        >
+          {t("gallery.title")}
+        </motion.h2>
         <Linea/>
         <div className="mt-10 w-full items-center gap-8 max-w-6xl mx-auto">
           <ShuffleGrid

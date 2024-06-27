@@ -57,7 +57,7 @@ const ListResponsive = ({list, icon}) => {
   return(
     <div className="flex flex-wrap">
       {list.map((li, index) => (
-        <div className="p-1 sm:w-1/2 w-full">
+        <div key={index} className="p-1 sm:w-1/2 w-full">
           <div className="bg-gray-100 rounded flex p-2 h-full items-center">
             {icon}
             <p className="ml-2">{li}</p>
@@ -71,7 +71,7 @@ const ListResponsive3Col = ({list, icon}) => {
   return(
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {list.map((li, index) => (
-        <div className="p-1 w-full">
+        <div key={index} className="p-1 w-full">
           <div className="bg-gray-100 rounded flex p-2 h-full items-center">
             {icon}
             <p className="ml-2">{li}</p>

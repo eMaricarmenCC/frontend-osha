@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 import { SliderImg } from "../../components/Slider/Slider";
 import { Accordian, AccordianItem } from "../../components/ui/Accordions";
@@ -8,13 +7,11 @@ import { CardFotTex } from "../../components/ui/Card";
 import { ListPoint } from "../../components/ui/List";
 import { Line1 } from "../../components/ui/Line";
 import { Breadcrumbs } from "../../components/ui/Breadcrumb";
-import { buttonPrimary } from "../../components/ui/Button";
 import { ImageWithInnerBorder } from "../../components/ui/Image";
 
 import { FaBuildingColumns } from "react-icons/fa6";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
-import { PiHandshakeFill, PiSealCheckBold } from "react-icons/pi";
-import { TbPointFilled } from "react-icons/tb";
+import { PiHandshakeFill } from "react-icons/pi";
 
 
 function Nosotros(){
@@ -56,9 +53,11 @@ function WhoWeAre(){
         icon={<FaBuildingColumns/>}
         img="/src/assets/img-nosotros/business.jpg"
       />
-      <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:py-15 lg:py-20 w-full bg-gray-100">
+      <div className="px-5 md:px-10 lg:px-20 xl:px-40 p-10 lg:pt-16 pb-20 w-full">
+        <h1 className="text-primary font-bold uppercase">{t("whoWeAre.title")}</h1>
+        <Line1 bgColorClass={"bg-secondary"}/>
         {/* Who are we? */}
-        <div className="w-full flex justify-center">
+        <div className="mt-20 w-full flex justify-center">
           <div className="lg:ml-8 lg:flex lg:max-w-10xl lg:shadow-lg rounded-lg" style={{ backgroundImage: "url('/src/assets/papel/papel3.jpeg')" }}>
             <div className="lg:w-2/4">
               <div className="lg:scale-110 h-80 bg-cover lg:w-full lg:h-full rounded-b-none border lg:rounded-lg"
@@ -66,17 +65,21 @@ function WhoWeAre(){
               </div>
             </div>
             <div className="py-12 px-6 lg:px-12 max-w-3xl md:max-w-7xl lg:w-2/4 rounded-t-none border lg:rounded-lg">
-              <h2 className="text-3xl text-secondary font-bold">{t("whoWeAre.title")}</h2>
               <p className="mt-2">{t("whoWeAre.p1")}</p>
               <p className="mt-2">{t("whoWeAre.p2")}</p>
-              <div className="mt-8">
-                <Link to="/contactanos" className="bg-primary text-gray-100 px-5 py-3 font-semibold rounded">Contactanos</Link>
+              <div className="pb-3 pt-8">
+                <a className="px-6 py-2 min-w-[120px] text-center text-white bg-sky-600 border border-sky-600 rounded active:text-sky-500 hover:bg-transparent hover:text-sky-600 focus:outline-none focus:ring"
+                  href="/contactanos">
+                  Contáctanos
+                </a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 w-full bg-gray-100">
         {/* Seccion de cartillas */}
-        <div className="mt-20 w-full flex justify-center">
+        <div className="w-full flex justify-center">
           <div className="flex flex-col md:flex-row gap-5">
             <Card
               icon={<HiOutlineBuildingOffice2 style={{color:"var(--lilaFuerte)",width:50, height:50}}/>}
@@ -119,41 +122,39 @@ function LegalNature(){
         img="/src/assets/img-nosotros/business.jpg"
       />
       {/* legalNature */}
-      <div className="px-5 md:px-10 lg:px-20 xl:px-60 py-10 lg:py-12 lg:py-12">
+      <div className="px-5 md:px-10 lg:px-20 xl:px-60 py-10 lg:pt-16">
         <div className="flex flex-col lg:flex-row gap-5">
           <div className="">
-            <h1 className={`text-primary font-bold inline-block ease-in-out inline-block mb-1`}>{t("legalNature.title")}</h1>
+            <h1 className="text-primary font-bold uppercase">{t("legalNature.title")}</h1>
             <Line1 bgColorClass={"bg-secondary"}/>
             <p className="mt-10">{t("legalNature.content")}</p>
+            <div className="pb-3 pt-8">
+              <a className="px-6 py-2 min-w-[120px] text-center text-white bg-sky-600 border border-sky-600 rounded active:text-sky-500 hover:bg-transparent hover:text-sky-600 focus:outline-none focus:ring"
+                href="/contactanos">
+                Contáctanos
+              </a>
+            </div>
           </div>
           <div className="">
             <img className="w-[3000px] h-full" src="/src/assets/img-inicio/engineerwithlaptop.png" alt="" />
           </div>
         </div>
-        {/*<div className="mt-10 p-5 rounded-l-full" style={{ backgroundImage: "url('/src/assets/papel/papel14.jpg')"}}>
-          <div className="overflow-hidden flex flex-col lg:flex-row mx-auto">
-            <img className="w-full max-w-xl rounded-l-full" src="/src/assets/img-nosotros/juridic.jpg" alt="osha-institute"/>
-            <div className={`relative lg:-ml-40 px-5 lg:px-10 pt-8 pb-8 bg-white lg:m-10 rounded-l-xl shadow-xl`}>
-              <p className="">{t("legalNature.content")}</p>
-            </div>
-          </div>
-        </div>*/}
-        {/* Mision and Vision */}
-        <div className="mt-20">
-          <div className="flex flex-col lg:flex-row gap-4">
-            <CardFotTex
-              title={t("legalNature.tit2-mision")}
-              text={t("legalNature.mision")}
-              textColorClass="text-primary"
-              img="/src/assets/img-nosotros/eduaction.jpeg"
-            />
-            <CardFotTex
-              title={t("legalNature.tit2-vision")}
-              text={t("legalNature.vision")}
-              textColorClass="text-primary"
-              img="/src/assets/img-nosotros/profesionals.jpg"
-            />
-          </div>
+      </div>
+      {/* Mision and Vision */}
+      <div className="bg-gray-100 px-5 md:px-10 lg:px-20 xl:px-60 py-10">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <CardFotTex
+            title={t("legalNature.tit2-mision")}
+            text={t("legalNature.mision")}
+            textColorClass="text-primary"
+            img="/src/assets/img-nosotros/eduaction.jpeg"
+          />
+          <CardFotTex
+            title={t("legalNature.tit2-vision")}
+            text={t("legalNature.vision")}
+            textColorClass="text-primary"
+            img="/src/assets/img-nosotros/profesionals.jpg"
+          />
         </div>
       </div>
     </section>
@@ -237,31 +238,41 @@ function InternationalCooperation(){
     },
   ];
   return(
-    <section className="bg-grisFondo">
+    <section>
       <Breadcrumbs
         text={t("internationalCooperation.title")}
         icon={<FaBuildingColumns/>}
         img="/src/assets/img-nosotros/business.jpg"
       />
-      <div className="px-5 md:px-10 lg:px-20 xl:px-40 py-10 lg:py-15 lg:py-20">
-        {/* internationalCooperation */}
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
-          <div className="lg:basis-1/2 flex-grow bg-white p-5 rounded-lg shadow-lg">
-            <h2 className="text-primary"><b>{t("internationalCooperation.title")}</b></h2>
-            <Line1 bgColorClass="bg-secondary"/>
-            {t("internationalCooperation.p", { returnObjects: true }).map((paragraph, index) => (
-              <p key={index} className="mt-2">{paragraph}</p>
-            ))}
-            <button className="mt-4 bg-primary hover:bg-azulOscuro py-2 px-4 rounded-lg text-white">Contáctanos</button>
+      {/* internationalCooperation */}
+      <div className="px-5 md:px-10 lg:px-20 xl:px-40 pt-10 lg:pt-16 pb-10">
+        <h1 className="text-primary uppercase font-bold">{t("internationalCooperation.title")}</h1>
+        <Line1 bgColorClass="bg-secondary"/>
+        <div className="mt-8 flex flex-col lg:flex-row gap-5">
+          <div>
+            <div>
+              {t("internationalCooperation.p", { returnObjects: true }).map((paragraph, index) => (
+                <p key={index} className="mb-2">{paragraph}</p>
+              ))}
+            </div>
+            <div className="pb-3 pt-8">
+              <a className="px-6 py-2 min-w-[120px] text-center text-white bg-sky-600 border border-sky-600 rounded active:text-sky-500 hover:bg-transparent hover:text-sky-600 focus:outline-none focus:ring"
+                href="/contactanos">
+                Contáctanos
+              </a>
+            </div>
           </div>
-          <div className="lg:basis-1/2 flex-grow">
-            <img className="rounded-xl h-full object-center" src="/src/assets/img-inicio/coopeinter.png" alt="cooperacion internacional"/>
+          <div className="mx-auto lg:min-w-[450px] xl:min-w-[500px] 2xl:min-w-[600px]">
+            <ImageWithInnerBorder
+              src="/src/assets/img-inicio/coopeinter.png"
+              alt="cooperación internacional"
+            />
           </div>
         </div>
-        {/* Carousel */}
-        <div className="mt-10">
-          <SliderImg imgs={coopImages}/>
-        </div>
+      </div>
+      {/* Carousel */}
+      <div className=" bg-gray-100 px-5 md:px-10 lg:px-20 xl:px-40 pt-10 pb-20">
+        <SliderImg imgs={coopImages}/>
       </div>
     </section>
   );
@@ -295,45 +306,47 @@ function PrivacyAndSecurityDeclaration(){
             />
           </div>
         </div>
-        <div className="mt-10 py-8 px-5 flex flex-col gap-5 bg-gray-100 rounded-lg">
-          <Accordian className='flex flex-col gap-5' >
-            <AccordianItem value='1' trigger={t("privacyAndSecurityDeclaration.queans1.question")}>
-              <p>{t("privacyAndSecurityDeclaration.queans1.answer")}</p>
-            </AccordianItem>
-            <AccordianItem value='2' trigger={t("privacyAndSecurityDeclaration.queans2.question")}>
-              <ListPoint
-                list={t("privacyAndSecurityDeclaration.queans2.answer-li", { returnObjects: true })}
-              />
-              <p className="mt-5">{t("privacyAndSecurityDeclaration.queans2.answer")}</p>
-            </AccordianItem>
-            <AccordianItem value='3' trigger={t("privacyAndSecurityDeclaration.queans3.question")}>
-              <p>{t("privacyAndSecurityDeclaration.queans3.answer")}</p>
-            </AccordianItem>
-            <AccordianItem value='4' trigger={t("privacyAndSecurityDeclaration.queans4.question")}>
-              <p>{t("privacyAndSecurityDeclaration.queans4.answer")}</p>
-            </AccordianItem>
-            <AccordianItem value='5' trigger={t("privacyAndSecurityDeclaration.queans5.question")}>
-              <p>{t("privacyAndSecurityDeclaration.queans5.answer")}</p>
-            </AccordianItem>
-            <AccordianItem value='6' trigger={t("privacyAndSecurityDeclaration.queans6.question")}>
-              <p>{t("privacyAndSecurityDeclaration.queans6.answer")}</p>
-            </AccordianItem>
-            <AccordianItem value='7' trigger={t("privacyAndSecurityDeclaration.queans7.question")}>
-              <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p1")}</p>
-              <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p2")}</p>
-              <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p3")}</p>
-              <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p4")}</p>
-              <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p5")}</p>
-              <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p6")}</p>
-              <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p7")}</p>
-            </AccordianItem>
-          </Accordian>
+      </div>
+      <div className="bg-gray-100 px-5 md:px-10 lg:px-20 xl:px-40 py-10">
+        <Accordian className='flex flex-col gap-5' >
+          <AccordianItem value='1' trigger={t("privacyAndSecurityDeclaration.queans1.question")}>
+            <p>{t("privacyAndSecurityDeclaration.queans1.answer")}</p>
+          </AccordianItem>
+          <AccordianItem value='2' trigger={t("privacyAndSecurityDeclaration.queans2.question")}>
+            <ListPoint
+              list={t("privacyAndSecurityDeclaration.queans2.answer-li", { returnObjects: true })}
+            />
+            <p className="mt-5">{t("privacyAndSecurityDeclaration.queans2.answer")}</p>
+          </AccordianItem>
+          <AccordianItem value='3' trigger={t("privacyAndSecurityDeclaration.queans3.question")}>
+            <p>{t("privacyAndSecurityDeclaration.queans3.answer")}</p>
+          </AccordianItem>
+          <AccordianItem value='4' trigger={t("privacyAndSecurityDeclaration.queans4.question")}>
+            <p>{t("privacyAndSecurityDeclaration.queans4.answer")}</p>
+          </AccordianItem>
+          <AccordianItem value='5' trigger={t("privacyAndSecurityDeclaration.queans5.question")}>
+            <p>{t("privacyAndSecurityDeclaration.queans5.answer")}</p>
+          </AccordianItem>
+          <AccordianItem value='6' trigger={t("privacyAndSecurityDeclaration.queans6.question")}>
+            <p>{t("privacyAndSecurityDeclaration.queans6.answer")}</p>
+          </AccordianItem>
+          <AccordianItem value='7' trigger={t("privacyAndSecurityDeclaration.queans7.question")}>
+            <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p1")}</p>
+            <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p2")}</p>
+            <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p3")}</p>
+            <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p4")}</p>
+            <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p5")}</p>
+            <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p6")}</p>
+            <p className="mt-3">{t("privacyAndSecurityDeclaration.queans7.answer-p7")}</p>
+          </AccordianItem>
+        </Accordian>
+      </div>
+      <div className="bg-white px-5 md:px-10 lg:px-20 xl:px-40 py-10">
+        <div className="border-2 border-primary p-5 rounded-lg">
+          <p>{t("privacyAndSecurityDeclaration.content-p2")}</p>
+          <p className="mt-3">{t("privacyAndSecurityDeclaration.content-p3")}</p>
+          <p className="mt-3">{t("privacyAndSecurityDeclaration.content-p4")}</p>
         </div>
-        <div className="mt-10 border-2 border-primary p-5 rounded-lg">
-            <p>{t("privacyAndSecurityDeclaration.content-p2")}</p>
-            <p className="mt-3">{t("privacyAndSecurityDeclaration.content-p3")}</p>
-            <p className="mt-3">{t("privacyAndSecurityDeclaration.content-p4")}</p>
-          </div>
       </div>
     </section>
   );
