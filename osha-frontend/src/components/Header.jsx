@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 //import '../styles/Header.css';
 import { BiMenuAltRight } from 'react-icons/bi';
-import OutsideClickHandler from "react-outside-click-handler";
-import logoOsha from '/src/assets/logo/logoOsha.png';
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
